@@ -1,17 +1,26 @@
-{%load static%}
-{%load bootstrap3%}
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body style="background-color: black;">
-    {%block navbar%}
-      {%include 'navbar.html'%}
-    {%endblock%}
-    {%block content%}
+{% load bootstrap3 %}
+{% load static%}
 
-    {%endblock%}
-  </body>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  {% block styles %}
+  {% bootstrap_css %}
+
+{% endblock %}
+
+</head>
+<body>
+
+
+  {%block navbar%}
+  {%include 'navbar.html'%}
+  {%endblock%}
+
+
+  {% block content %}
+  {%endblock%}
+</body>
 </html>
